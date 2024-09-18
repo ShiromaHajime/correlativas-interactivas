@@ -1,0 +1,31 @@
+// Customizing Bootstrap with Sass variables:
+// https://getbootstrap.com/docs/5.0/customize/sass/
+
+// $primary: #276fc2;
+// $secondary: #e8d21d;
+// $border-radius: 1px;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.caja {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.correlativa {
+  background-color: red;
+}
+
+.cursada {
+  background-color: yellow;
+}
+
+.aprobada {
+  background-color: rgb(0, 255, 0);
+}
+
+.seleccionada {
+  background-color: aqua;
+}
