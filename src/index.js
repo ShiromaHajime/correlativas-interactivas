@@ -1,350 +1,301 @@
 import './styles.scss';
 
 const materias = [
+  // Nivel I
   {
     nombre: 'Análisis Matemático I',
     tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Análisis Matemático II', 'Física II', 'Probabilidad y Estadística'],
+    correlativa_aprobada: ['Economía', 'Análisis Numérico']
   },
   {
     nombre: 'Álgebra y Geometría Analítica',
     tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
-  },
-  {
-    nombre: 'Matemática Discreta',
-    tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
-  },
-  {
-    nombre: 'Sistemas y Organizaciones',
-    tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
-  },
-  {
-    nombre: 'Algoritmos y Estructuras de Datos',
-    tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
-  },
-  {
-    nombre: 'Arquitectura de Computadoras',
-    tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Análisis Matemático II', 'Probabilidad y Estadística'],
+    correlativa_aprobada: ['Economía', 'Análisis Numérico']
   },
   {
     nombre: 'Física I',
     tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Física II', 'Comunicación de Datos'],
+    correlativa_aprobada: []
   },
   {
     nombre: 'Inglés I',
     tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Inglés II'],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Química',
+    nombre: 'Lógica y Estructuras Discretas',
     tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Sintaxis y Semántica de los Lenguajes', 'Paradigmas de Programación'],
+    correlativa_aprobada: []
   },
+  {
+    nombre: 'Algoritmos y Estructuras de Datos',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: [],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Sintaxis y Semántica de los Lenguajes', 'Paradigmas de Programación', 'Análisis de Sistemas de Información'],
+    correlativa_aprobada: ['Bases de Datos', 'Desarrollo de Software']
+  },
+  {
+    nombre: 'Arquitectura de Computadoras',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: [],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Sistemas Operativos', 'Comunicación de Datos'],
+    correlativa_aprobada: []
+  },
+  {
+    nombre: 'Sistemas y Procesos de Negocio',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: [],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Análisis de Sistemas de Información'],
+    correlativa_aprobada: []
+  },
+  // Nivel II
   {
     nombre: 'Análisis Matemático II',
     tipo: 'obligatoria',
-    para_rendir: ['Análisis Matemático I', 'Álgebra y Geometría Analítica'],
-    para_cursar_aprobadas: ['Análisis Matemático I', 'Álgebra y Geometría Analítica'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Análisis Matemático I', 'Álgebra y Geometría Analítica'],
+    correlativa_cursada: ['Simulación', 'Análisis Numérico'],
+    correlativa_aprobada: []
   },
   {
     nombre: 'Física II',
     tipo: 'obligatoria',
-    para_rendir: ['Física I', 'Análisis Matemático I'],
-    para_cursar_aprobadas: ['Física I', 'Análisis Matemático I'],
-    cursada: [],
-  },
-  {
-    nombre: 'Análisis de Sistemas',
-    tipo: 'obligatoria',
-    para_rendir: ['Sistemas y Organizaciones', 'Algoritmos y Estructuras de Datos'],
-    para_cursar_aprobadas: ['Sistemas y Organizaciones', 'Algoritmos y Estructuras de Datos'],
-    cursada: [],
-  },
-  {
-    nombre: 'Sintaxis y Semántica del Lenguaje',
-    tipo: 'obligatoria',
-    para_rendir: ['Inglés I', 'Algoritmos y Estructuras de Datos', 'Matemática Discreta'],
-    para_cursar_aprobadas: ['Inglés I', 'Algoritmos y Estructuras de Datos', 'Matemática Discreta'],
-    cursada: [],
-  },
-  {
-    nombre: 'Paradigmas de Programación',
-    tipo: 'obligatoria',
-    para_rendir: ['Inglés I', 'Algoritmos y Estructuras de Datos', 'Matemática Discreta'],
-    para_cursar_aprobadas: ['Inglés I', 'Algoritmos y Estructuras de Datos', 'Matemática Discreta'],
-    cursada: [],
-  },
-  {
-    nombre: 'Sistemas Operativos',
-    tipo: 'obligatoria',
-    para_rendir: ['Algoritmos y Estructuras de Datos', 'Matemática Discreta', 'Arquitectura de Computadoras'],
-    para_cursar_aprobadas: ['Algoritmos y Estructuras de Datos', 'Matemática Discreta', 'Arquitectura de Computadoras'],
-    cursada: [],
-  },
-  {
-    nombre: 'Sistemas de Representación',
-    tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
-  },
-  {
-    nombre: 'Probabilidades y Estadística',
-    tipo: 'obligatoria',
-    para_rendir: ['Análisis Matemático I', 'Álgebra y Geometría Analítica'],
-    para_cursar_aprobadas: ['Análisis Matemático I', 'Álgebra y Geometría Analítica'],
-    cursada: [],
-  },
-  {
-    nombre: 'Diseño de Sistemas',
-    tipo: 'obligatoria',
-    para_rendir: ['Análisis de Sistemas', 'Sistemas Operativos', 'Sintaxis y Semántica del Lenguaje'],
-    para_cursar_aprobadas: ['Análisis de Sistemas', 'Sistemas Operativos', 'Sintaxis y Semántica del Lenguaje'],
-    cursada: [],
-  },
-  {
-    nombre: 'Comunicaciones',
-    tipo: 'obligatoria',
-    para_rendir: ['Inglés I', 'Física II', 'Análisis Matemático II'],
-    para_cursar_aprobadas: ['Inglés I', 'Física II', 'Análisis Matemático II'],
-    cursada: [],
-  },
-  {
-    nombre: 'Matemática Superior',
-    tipo: 'obligatoria',
-    para_rendir: ['Análisis Matemático II'],
-    para_cursar_aprobadas: ['Análisis Matemático II'],
-    cursada: [],
-  },
-  {
-    nombre: 'Gestión de Datos',
-    tipo: 'obligatoria',
-    para_rendir: ['Análisis de Sistemas', 'Sintaxis y Semántica del Lenguaje', 'Paradigmas de Programación'],
-    para_cursar_aprobadas: ['Análisis de Sistemas', 'Sintaxis y Semántica del Lenguaje', 'Paradigmas de Programación'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Análisis Matemático I', 'Física I'],
+    correlativa_cursada: ['Tecnologías para la Automatización'],
+    correlativa_aprobada: []
   },
   {
     nombre: 'Ingeniería y Sociedad',
     tipo: 'obligatoria',
-    para_rendir: [],
-    para_cursar_aprobadas: [],
-    cursada: [],
-  },
-  {
-    nombre: 'Economía',
-    tipo: 'obligatoria',
-    para_rendir: ['Análisis de Sistemas'],
-    para_cursar_aprobadas: ['Análisis de Sistemas'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Legislación'],
+    correlativa_aprobada: []
   },
   {
     nombre: 'Inglés II',
     tipo: 'obligatoria',
-    para_rendir: ['Inglés I'],
-    para_cursar_aprobadas: ['Inglés I'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Inglés I'],
+    correlativa_cursada: ['Proyecto Final'],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Seguridad en Sistemas de Información',
-    tipo: 'electiva',
-    para_rendir: ['Análisis de Sistemas', 'Sintaxis y Semántica del Lenguaje', 'Sistemas Operativos'],
-    para_cursar_aprobadas: ['Análisis de Sistemas', 'Sintaxis y Semántica del Lenguaje', 'Sistemas Operativos'],
-    cursada: [],
-  },
-  {
-    nombre: 'Sistemas de Transmisión y Redes Inalámbricas',
-    tipo: 'electiva',
-    para_rendir: ['Análisis Matemático II', 'Comunicaciones', 'Física II'],
-    para_cursar_aprobadas: ['Análisis Matemático II', 'Comunicaciones', 'Física II'],
-    cursada: [],
-  },
-  {
-    nombre: 'Comunicación Profesional',
-    tipo: 'electiva',
-    para_rendir: ['Sistemas y Organizaciones'],
-    para_cursar_aprobadas: ['Sistemas y Organizaciones'],
-    cursada: [],
-  },
-  {
-    nombre: 'Tecnología y Gestión Web',
-    tipo: 'electiva',
-    para_rendir: ['Sistemas Operativos', 'Sintaxis y Semántica del Lenguaje'],
-    para_cursar_aprobadas: ['Sistemas Operativos', 'Sintaxis y Semántica del Lenguaje'],
-    cursada: [],
-  },
-  {
-    nombre: 'Emprendedorismo',
-    tipo: 'electiva',
-    para_rendir: ['Sistemas y Organizaciones'],
-    para_cursar_aprobadas: ['Sistemas y Organizaciones'],
-    cursada: [],
-  },
-  {
-    nombre: 'Redes de Información',
+    nombre: 'Sintaxis y Semántica de los Lenguajes',
     tipo: 'obligatoria',
-    para_rendir: ['Sistemas Operativos', 'Comunicaciones', 'Análisis Matemático II'],
-    para_cursar_aprobadas: ['Sistemas Operativos', 'Comunicaciones', 'Análisis Matemático II'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Lógica y Estructuras Discretas', 'Algoritmos y Estructuras de Datos'],
+    correlativa_cursada: ['Bases de Datos', 'Desarrollo de Software'],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Administración de Recursos',
+    nombre: 'Paradigmas de Programación',
     tipo: 'obligatoria',
-    para_rendir: ['Sistemas Operativos', 'Diseño de Sistemas', 'Economía'],
-    para_cursar_aprobadas: ['Sistemas Operativos', 'Diseño de Sistemas', 'Economía'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Lógica y Estructuras Discretas', 'Algoritmos y Estructuras de Datos'],
+    correlativa_cursada: ['Desarrollo de Software', 'Diseño de Sistemas de Información'],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Investigación Operativa',
+    nombre: 'Sistemas Operativos',
     tipo: 'obligatoria',
-    para_rendir: ['Análisis Matemático II', 'Matemática Superior'],
-    para_cursar_aprobadas: ['Análisis Matemático II', 'Matemática Superior'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Arquitectura de Computadoras'],
+    correlativa_cursada: ['Redes de Datos'],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Simulación',
+    nombre: 'Análisis de Sistemas de Información',
     tipo: 'obligatoria',
-    para_rendir: ['Análisis Matemático II', 'Matemática Superior'],
-    para_cursar_aprobadas: ['Análisis Matemático II', 'Matemática Superior'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Algoritmos y Estructuras de Datos', 'Sistemas y Procesos de Negocio'],
+    correlativa_cursada: ['Bases de Datos', 'Desarrollo de Software'],
+    correlativa_aprobada: ['Administración de Sistemas de Información']
+  },
+  // Nivel III
+  {
+    nombre: 'Probabilidad y Estadística',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Análisis Matemático I', 'Álgebra y Geometría Analítica'],
+    correlativa_cursada: ['Investigación Operativa', 'Simulación'],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Ingeniería del Software',
+    nombre: 'Economía',
     tipo: 'obligatoria',
-    para_rendir: ['Probabilidades y Estadística', 'Diseño de Sistemas', 'Gestión de Datos'],
-    para_cursar_aprobadas: ['Probabilidades y Estadística', 'Diseño de Sistemas', 'Gestión de Datos'],
-    cursada: [],
+    para_cursar_aprobada: ['Análisis Matemático I', 'Álgebra y Geometría Analítica'],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Administración de Sistemas de Información'],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Teoría de Control',
+    nombre: 'Bases de Datos',
     tipo: 'obligatoria',
-    para_rendir: ['Química', 'Matemática Superior'],
-    para_cursar_aprobadas: ['Química', 'Matemática Superior'],
-    cursada: [],
+    para_cursar_aprobada: ['Algoritmos y Estructuras de Datos', 'Análisis de Sistemas de Información'],
+    para_cursar_cursada: ['Sintaxis y Semántica de los Lenguajes'],
+    correlativa_cursada: ['Ingeniería y Calidad de Software'],
+    correlativa_aprobada: []
+  },
+  {
+    nombre: 'Desarrollo de Software',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Algoritmos y Estructuras de Datos', 'Análisis de Sistemas de Información'],
+    para_cursar_cursada: ['Sintaxis y Semántica de los Lenguajes'],
+    correlativa_cursada: ['Ingeniería y Calidad de Software'],
+    correlativa_aprobada: []
+  },
+  {
+    nombre: 'Comunicación de Datos',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Física I', 'Arquitectura de Computadoras'],
+    para_cursar_cursada: [],
+    correlativa_cursada: ['Redes de Datos', 'Seguridad en los Sistemas de Información'],
+    correlativa_aprobada: []
+  },
+  {
+    nombre: 'Análisis Numérico',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Análisis Matemático I', 'Álgebra y Geometría Analítica'],
+    para_cursar_cursada: ['Análisis Matemático II'],
+    correlativa_cursada: ['Investigación Operativa'],
+    correlativa_aprobada: []
+  },
+  {
+    nombre: 'Diseño de Sistemas de Información',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Lógica y Estructuras Discretas', 'Sistemas y Procesos de Negocio', 'Inglés I'],
+    para_cursar_cursada: ['Paradigmas de Programación', 'Análisis de Sistemas de Información'],
+    correlativa_cursada: ['Ingeniería y Calidad de Software', 'Sistemas de Gestión'],
+    correlativa_aprobada: []
   },
   {
     nombre: 'Legislación',
     tipo: 'obligatoria',
-    para_rendir: ['Análisis de Sistemas', 'Ingeniería y Sociedad'],
-    para_cursar_aprobadas: ['Análisis de Sistemas', 'Ingeniería y Sociedad'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Ingeniería y Sociedad'],
+    correlativa_cursada: ['Gestión Gerencial'],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Metodología de la Investigación',
-    tipo: 'electiva',
-    para_rendir: ['Diseño de Sistemas'],
-    para_cursar_aprobadas: ['Diseño de Sistemas'],
-    cursada: [],
-  },
-  {
-    nombre: 'Tecnología para la Explotación de Información',
-    tipo: 'electiva',
-    para_rendir: ['Diseño de Sistemas'],
-    para_cursar_aprobadas: ['Sintaxis y Semántica del Lenguaje'],
-    cursada: [],
-  },
-  {
-    nombre: 'Auditoría de Sistemas de Información',
-    tipo: 'electiva',
-    para_rendir: ['Seguridad en Sistemas de Información'],
-    para_cursar_aprobadas: ['Seguridad en Sistemas de Información'],
-    cursada: [],
-  },
-  {
-    nombre: 'Proyecto Final',
+    nombre: 'Ingeniería y Calidad de Software',
     tipo: 'obligatoria',
-    para_rendir: ['Redes de Información', 'Administración de Recursos', 'Ingeniería del Software', 'Legislación'],
-    para_cursar_aprobadas: ['Redes de Información', 'Administración de Recursos', 'Ingeniería del Software', 'Legislación'],
-    cursada: [],
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Bases de Datos', 'Desarrollo de Software', 'Diseño de Sistemas de Información'],
+    correlativa_cursada: ['Proyecto Final'],
+    correlativa_aprobada: []
   },
+  {
+    nombre: 'Redes de Datos',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Sistemas Operativos', 'Comunicación de Datos'],
+    correlativa_cursada: ['Seguridad en los Sistemas de Información'],
+    correlativa_aprobada: []
+  },
+  {
+    nombre: 'Investigación Operativa',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: [],
+    para_cursar_cursada: ['Probabilidad y Estadística', 'Análisis Numérico'],
+    correlativa_cursada: [],
+    correlativa_aprobada: []
+  },
+  {
+    nombre: 'Simulación',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Análisis Matemático II'],
+    para_cursar_cursada: ['Probabilidad y Estadística'],
+    correlativa_cursada: ['Inteligencia Artificial', 'Ciencia de Datos'],
+    correlativa_aprobada: []
+  },
+  {
+    nombre: 'Tecnologías para la Automatización',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Análisis Matemático II'],
+    para_cursar_cursada: ['Física II', 'Análisis Numérico'],
+    correlativa_cursada: [],
+    correlativa_aprobada: []
+  },
+  {
+    nombre: 'Administración de Sistemas de Información',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Economía', 'Diseño de Sistemas de Información'],
+    para_cursar_cursada: ['Análisis de Sistemas de Información'],
+    correlativa_cursada: ['Sistemas de Gestión', 'Seguridad en los Sistemas de Información'],
+    correlativa_aprobada: ['Gestión Gerencial']
+  },
+
+  // Nivel V
   {
     nombre: 'Inteligencia Artificial',
     tipo: 'obligatoria',
-    para_rendir: ['Investigación Operativa', 'Simulación'],
-    para_cursar_aprobadas: ['Investigación Operativa', 'Simulación'],
-    cursada: [],
+    para_cursar_aprobada: ['Probabilidad y Estadística', 'Análisis Numérico'],
+    para_cursar_cursada: ['Simulación'],
+    correlativa_cursada: [],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Administración Gerencial',
+    nombre: 'Ciencia de Datos',
     tipo: 'obligatoria',
-    para_rendir: ['Administración de Recursos', 'Investigación Operativa'],
-    para_cursar_aprobadas: ['Administración de Recursos', 'Investigación Operativa'],
-    cursada: [],
+    para_cursar_aprobada: ['Probabilidad y Estadística', 'Bases de Datos'],
+    para_cursar_cursada: ['Simulación'],
+    correlativa_cursada: [],
+    correlativa_aprobada: []
   },
   {
     nombre: 'Sistemas de Gestión',
     tipo: 'obligatoria',
-    para_rendir: ['Administración de Recursos', 'Investigación Operativa', 'Simulación'],
-    para_cursar_aprobadas: ['Administración de Recursos', 'Investigación Operativa', 'Simulación'],
-    cursada: [],
+    para_cursar_aprobada: ['Diseño de Sistemas de Información'],
+    para_cursar_cursada: ['Administración de Sistemas de Información'],
+    correlativa_cursada: [],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Internetworking',
-    tipo: 'electiva',
-    para_rendir: ['Administración de Recursos'],
-    para_cursar_aprobadas: ['Redes de Información'],
-    cursada: [],
+    nombre: 'Gestión Gerencial',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Legislación', 'Administración de Sistemas de Información'],
+    para_cursar_cursada: [],
+    correlativa_cursada: [],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Ingeniería en Calidad',
-    tipo: 'electiva',
-    para_rendir: ['Administración de Recursos'],
-    para_cursar_aprobadas: ['Diseño de Sistemas'],
-    cursada: [],
+    nombre: 'Seguridad en los Sistemas de Información',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Desarrollo de Software', 'Comunicación de Datos'],
+    para_cursar_cursada: ['Redes de Datos', 'Administración de Sistemas de Información'],
+    correlativa_cursada: [],
+    correlativa_aprobada: []
   },
   {
-    nombre: 'Aplicaciones en Tiempo Real',
-    tipo: 'electiva',
-    para_rendir: ['Comunicaciones', 'Redes de Información', 'Teoría de Control'],
-    para_cursar_aprobadas: ['Comunicaciones', 'Redes de Información', 'Teoría de Control'],
-    cursada: [],
-  },
-  {
-    nombre: 'Reingeniería',
-    tipo: 'electiva',
-    para_rendir: ['Gestión de Datos', 'Legislación'],
-    para_cursar_aprobadas: ['Economía', 'Diseño de Sistemas'],
-    cursada: [],
-  },
-  {
-    nombre: 'Tecnología de Información para la Gestión Empresarial',
-    tipo: 'electiva',
-    para_rendir: ['Administración de Recursos'],
-    para_cursar_aprobadas: ['Gestión de Datos'],
-    cursada: [],
-  },
-  {
-    nombre: 'Sistemas Avanzados de Bases de Datos',
-    tipo: 'electiva',
-    para_rendir: ['Gestión de Datos', 'Redes de Información'],
-    para_cursar_aprobadas: ['Sistemas Operativos'],
-    cursada: [],
+    nombre: 'Proyecto Final',
+    tipo: 'obligatoria',
+    para_cursar_aprobada: ['Inglés II', 'Desarrollo de Software', 'Bases de Datos'],
+    para_cursar_cursada: ['Ingeniería y Calidad de Software', 'Redes de Datos', 'Administración de Sistemas de Información'],
+    correlativa_cursada: [],
+    correlativa_aprobada: []
   }
 ];
+
 
 let cajas = document.getElementsByClassName('caja');
 
@@ -352,7 +303,7 @@ for (let i = 0; i < cajas.length; i++) {
   cajas[i].onclick = function () {
     // Elimina la clase 'seleccionada' de todas las cajas
     for (let j = 0; j < cajas.length; j++) {
-      cajas[j].classList = 'caja';
+      cajas[j].classList = 'caja col mt-3';
     }
     // Agrega la clase 'seleccionada' a la caja clickeada
     this.classList.add('seleccionada');
@@ -362,23 +313,29 @@ for (let i = 0; i < cajas.length; i++) {
     let materiaSeleccionada = materias.find(
       (materia) => materia.nombre === idCajaSeleccionada
     );
-    for (let i = 0; i < materiaSeleccionada.para_cursar_aprobadas.length; i++) {
-      console.log(materiaSeleccionada.para_cursar_aprobadas[i]);
+    for (let i = 0; i < materiaSeleccionada.para_cursar_aprobada.length; i++) {
+      console.log(materiaSeleccionada.para_cursar_aprobada[i]);
       document
-        .getElementById(materiaSeleccionada.para_cursar_aprobadas[i])
-        .classList.add('aprobada');
+        .getElementById(materiaSeleccionada.para_cursar_aprobada[i])
+        .classList.add('para_cursar_aprobada');
     }
-    for (let i = 0; i < materiaSeleccionada.para_rendir.length; i++) {
-      console.log(materiaSeleccionada.para_rendir[i]);
+    for (let i = 0; i < materiaSeleccionada.para_cursar_cursada.length; i++) {
+      console.log(materiaSeleccionada.para_cursar_cursada[i]);
       document
-        .getElementById(materiaSeleccionada.para_rendir[i])
-        .classList.add('correlativa');
+        .getElementById(materiaSeleccionada.para_cursar_cursada[i])
+        .classList.add('para_cursar_cursada');
     }
-    for (let i = 0; i < materiaSeleccionada.cursada.length; i++) {
-      console.log(materiaSeleccionada.cursada[i]);
+    for (let i = 0; i < materiaSeleccionada.correlativa_cursada.length; i++) {
+      console.log(materiaSeleccionada.correlativa_cursada[i]);
       document
-        .getElementById(materiaSeleccionada.cursada[i])
-        .classList.add('cursada');
+        .getElementById(materiaSeleccionada.correlativa_cursada[i])
+        .classList.add('correlativa_cursada');
+    }
+    for (let i = 0; i < materiaSeleccionada.correlativa_aprobada.length; i++) {
+      console.log(materiaSeleccionada.correlativa_aprobada[i]);
+      document
+        .getElementById(materiaSeleccionada.correlativa_aprobada[i])
+        .classList.add('correlativa_aprobada');
     }
   };
 }

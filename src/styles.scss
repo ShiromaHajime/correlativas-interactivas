@@ -16,17 +16,22 @@
   align-items: center;
   text-align: center;
   display: flex;
+  cursor: pointer;
 }
 
-.correlativa {
+.correlativa_aprobada {
   background-color: red;
 }
 
-.cursada {
+.correlativa_cursada {
+  background-color: orange;
+}
+
+.para_cursar_cursada {
   background-color: yellow;
 }
 
-.aprobada {
+.para_cursar_aprobada {
   background-color: rgb(0, 255, 0);
 }
 
